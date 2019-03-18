@@ -4,22 +4,14 @@
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', Arial;
     /* background-image: url('/images/background.png'); */
-    background-color: black;
+    background-color: blue;
     color: #444;
     line-height: 1.6;
     max-width: 960px;
-    font-size: 16px;
+    font-size: 18px;
     margin: auto;
-}
-
-body > header {
-    background-color: #A91101;
-}
-
-main {
-    background-color: #eeeeee;
 }
 
 h1,
@@ -28,8 +20,9 @@ h3 {
     line-height: 1.2;
 }
 
+/* Navbar */
 nav {
-    background-color: #A91101;
+    background-color: #181F1C;
 }
 
 nav > ul {
@@ -40,16 +33,21 @@ nav > ul {
 
 nav > ul > li {
     margin: 0 0.5rem;
-    /* padding: 1rem; */
 }
 
 nav > ul > li > a {
     text-decoration: none;
-    color: #444;
+    color: #00693E;
+}
+
+/* Main container */
+main {
+    background-color: #eeeeee;
 }
 
 main > header {
-    color: #A91101;
+    background-image: url('/images/banner.png');
+    color: #181F1C;
     height: 200px;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,50 +63,70 @@ main > header > div {
     transform: translate(-50%, -50%);
 }
 
+/* Content container */
 section {
-    padding: 0.5rem;
+    padding: 1rem;
+    max-width: 760px;
+    margin: auto;
 }
 
+section > header {
+    color: #75E4B3;
+    font-size: 26px;
+    padding: 16px 0 24px;
+}
+
+/* Content */
 article {
     border-bottom: 1px solid lightgray;
+    padding-bottom: 16px;
 }
 
-article > div {
+article div {
+    
     display: flex;
-    margin: 8px 0px;
 }
 
-article > div > ul {
+article > div ul {
+    font-family: Georgia, Times, "Times New Roman", serif;
     list-style-type: none;
-}
-
-article > div:first-child > ul {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
     font-size: 0.9em;
-    padding: 0 0 0 8px;
-    border: 1px solid lightgray;
 }
 
-article > div:last-child > ul:first-child {
-    padding: 0 8px 0 0;
+/* Price */
+article > div > ul {
+    line-height: 1.2;
+    padding-left: 16px;
+    margin-left: auto;
 }
 
-article > div:last-child > ul ~ ul {
+article > div > ul > li > span {
+    font-size: 0.7em;
+}
+
+/* Info */
+article > div > div > ul {
+    text-align: center;
+}
+
+article > div > div > ul:first-child > li {
+    padding-right: 8px;
+}
+
+article > div > div > ul ~ ul > li{
     padding: 0 8px;
 }
 
-/* article > div:last-child > ul > li:first-child {
-    font-size: 0.6em;
-} */
-
-article > div:last-child > ul > li {
-    font-size: 0.8em;
-}
-
-article > div:last-child > ul:first-child + ul {
+article > div > div > ul:first-child + ul > li {
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
 }
+/* End of containers */
 
+/* Footer */
 footer {
     background-color: indigo;
 }
